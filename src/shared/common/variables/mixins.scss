@@ -1,0 +1,33 @@
+@mixin item-with-text($img) {
+  content: '';
+  position: absolute;
+  width: 0.8em;
+  height: 0.8em;
+  background-image: $img;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 0.4em;
+  right: 100%;
+  top: 0;
+}
+
+@mixin link-hover() {
+  content: '';
+  position: absolute;
+  height: 0.055em;
+  bottom: 2px;
+  left: 0;
+  background: gradient-mp-bar();
+  width: 0;
+  transition: main-transition($attribute: width);
+}
+
+@mixin before-background() {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

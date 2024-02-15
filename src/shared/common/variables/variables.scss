@@ -1,0 +1,15 @@
+@import './colors.scss';
+@import './sizes.scss';
+
+// Shadows
+$shadow-standard: 0px 4px 6px 0px #00000012;
+
+//Borders
+$border-color: $color-sat-600;
+
+//Radius
+$main-border-radius: $size-e-xxs;
+
+@function main-border-standard() {
+  @return solid $border-weight $border-color;
+}

@@ -1,0 +1,39 @@
+@mixin main-button() {
+  position: relative;
+  padding: $size-e-xxxs $size-e-m;
+  border-radius: $main-border-radius;
+  overflow: hidden;
+  color: $color-white;
+  transition: main-transition($attribute: color);
+  background-color: transparent;
+
+  &::before {
+    @include before-background;
+    background: gradient-purple();
+    opacity: 1;
+    transition: main-transition($attribute: opacity);
+  }
+
+  &::after {
+    @include before-background;
+    border-radius: $main-border-radius;
+    opacity: 0;
+    border: solid 2px;
+    border-color: $purple-dark;
+    transition: main-transition($attribute: opacity);
+  }
+
+  &:hover {
+    background: transparent;
+    color: $purple-dark;
+    border-color: $purple-dark;
+
+    &::before {
+      opacity: 0;
+    }
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}

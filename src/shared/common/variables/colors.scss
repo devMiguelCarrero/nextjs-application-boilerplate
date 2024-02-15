@@ -1,0 +1,44 @@
+//Functional colors - CHARTING
+$midnight-blue: #0b121c;
+$main: $midnight-blue;
+$color-white: #fff;
+$color-text: $midnight-blue;
+$color-background: #f9f9f9;
+$light-blue: #03e9f4;
+
+//Functional colors - Traffic Lights
+$color-binance: #facc47;
+
+//Site main colors
+$turquoise-light: #a7dad1;
+$turquoise-intense: #52bce9;
+$turquoise-neutral: #1083ad;
+
+$purple-dark: #242a68;
+$purple-intense: #792c7c;
+$purple-neutral: #4d337d;
+
+// TINTS
+$color-sat-50: #f3f8fe;
+$color-sat-100: #dfe6ef;
+$color-sat-200: #c9d2df;
+$color-sat-300: #b3c0d3;
+$color-sat-400: #aeafae;
+$color-sat-500: #7b90ae;
+$color-sat-600: #5c7495;
+$color-sat-700: #425a7c;
+$color-sat-800: #2b4362;
+$color-sat-900: #1a2e49;
+$color-sat-1000: #0d1c30;
+
+$disabled-color: $color-sat-700;
+
+// Gradients
+// Tint Gradients
+@function gradient-turquoise($deg: to right) {
+  @return linear-gradient(#{$deg}, $turquoise-intense 50%, $turquoise-neutral);
+}
+
+@function gradient-purple($deg: to right) {
+  @return linear-gradient(#{$deg}, $purple-neutral 50%, $purple-dark);
+}
