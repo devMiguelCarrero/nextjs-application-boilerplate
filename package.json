@@ -1,7 +1,29 @@
 {
-  "name": "why-2-join",
+  "name": "nextjs-application-boilerplate",
+  "description": "A highly structured Next.js application boilerplate designed for rapid and scalable development. Featuring an organized SCSS style architecture and a set of basic reusable components based on atomic design principles, this boilerplate serves as an ideal starting point for building sophisticated Next.js applications. Tailored for developers seeking efficiency without compromising on quality, it integrates best practices for styling, component organization, and application architecture.",
+  "private": false,
   "version": "0.1.0",
-  "private": true,
+  "keywords": [
+    "Next.js",
+    "boilerplate",
+    "SCSS",
+    "atomic-design",
+    "react",
+    "reusable-components",
+    "application-development",
+    "web-development",
+    "structured-styling",
+    "scalable-architecture"
+  ],
+  "author": "devMiguelCarrero",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devMiguelCarrero/nextjs-application-boilerplate.git"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://www.paypal.com/donate/?hosted_button_id=RKK3G3FWEAMLU"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,19 +31,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "classnames": "^2.5.1",
+    "next": "^14.0.4-canary.17",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.0.4"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
     "eslint": "^8",
-    "eslint-config-next": "14.0.4"
+    "eslint-config-next": "14.0.4",
+    "postcss": "^8",
+    "sass": "^1.70.0",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
   }
 }
