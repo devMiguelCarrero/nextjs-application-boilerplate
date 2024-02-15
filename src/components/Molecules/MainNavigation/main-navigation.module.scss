@@ -1,0 +1,96 @@
+@import '@/shared/common/variables';
+@import '@/shared/common/styles/buttons';
+
+$tablet-height: $size-e-xl;
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: $size-e-xxxs $size-e-xs;
+  min-height: $size-e-l;
+  background-color: $color-white;
+  box-shadow: $shadow-standard;
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: $size-e-s;
+
+    &__item {
+      list-style-type: none;
+    }
+
+    &__link {
+      @include menu-item-size;
+      display: block;
+      position: relative;
+      list-style-type: none;
+      z-index: 1;
+      &--featured {
+        @include main-button;
+      }
+    }
+  }
+
+  @include tablet {
+    padding: $size-e-xxs $size-e-xs;
+    height: $tablet-height;
+  }
+
+  &__toggler {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--collapse {
+      justify-content: center;
+      @include tablet {
+        justify-content: space-between;
+      }
+    }
+    &--non-collapse {
+      @include tablet {
+        visibility: hidden;
+        transition: main-transition($attribute: all, $time: 0.4s);
+        transform: translateX(-100%);
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: absolute;
+        top: calc(0% + #{$tablet-height});
+        left: 0;
+        width: 100vw;
+        height: calc(100vh - #{$tablet-height});
+        padding: $size-e-m $size-e-s;
+        overflow: auto;
+        background-color: rgba($midnight-blue, 0.6);
+
+        .menu {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          color: $color-white;
+        }
+        &.opened {
+          visibility: visible;
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    }
+  }
+}
